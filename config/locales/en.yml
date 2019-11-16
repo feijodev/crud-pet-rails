@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  welcome: Welcome to Pet list
+  pet:
+    name: Name
+    birthday: Birthday
+    breed: Breed
+    category: Category
