@@ -1,0 +1,28 @@
+<small><%= link_to I18n.t('go_back'), root_path %></small>
+<h1><%= I18n.t 'medical_record' %></h1>
+
+<%= render "form" %>
+
+<p><b><%= I18n.t 'pet.name' %>:</b> <%= @pet.name %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><%= I18n.t 'medical.treatment' %></th>
+      <th scope="col"><%= I18n.t 'medical.symptom' %></th>
+      <th scope="col"><%= I18n.t 'action' %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pet.medicals.each do |item| %>
+      <tr>
+        <th><%= item.treatment %></th>
+        <th><%= item.symptom %></th>
+        <th><%= link_to I18n.t('delete'), pet_medical_path(pet_id: item.pet_id, id: item.id), 
+                                          data: {confirm: I18n.t('confirmation')}, 
+                                          method: 'delete' %></th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

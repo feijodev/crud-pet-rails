@@ -1,0 +1,23 @@
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <%= I18n.t('add') %>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <%= bootstrap_form_tag(url: pets_path, method: "post") do |f| %>
+          <%= f.text_field :name, label: I18n.t('pet.name') %>
+          <%= f.date_field :birthday, label: I18n.t('pet.birthday') %>
+          <%= f.text_field :breed, label: I18n.t('pet.breed') %>
+          <%= f.select :category, [["Dog", 'dog'], ["Cat", 'cat']], { label: I18n.t('pet.category')} %>
+
+          <%= f.submit I18n.t('submit') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 <h1><%= I18n.t 'welcome' %></h1>
 
+<%= render "form" %>
+
 <table class="table">
   <thead>
     <tr>
@@ -8,20 +10,21 @@
       <th scope="col"><%= I18n.t 'pet.birthday' %></th>
       <th scope="col"><%= I18n.t 'pet.breed' %></th>
       <th scope="col"><%= I18n.t 'pet.category' %></th>
+      <th scope="col"><%= I18n.t 'action' %></th>
     </tr>
   </thead>
 
   <tbody>
-  <% @pets.each do |item| %>
-    <tr>
-      <th><%= item.id %></th>
-      <th><%= item.name %></th>
-      <th><%= item.birthday.strftime("%d/%m/%Y") %></th>
-      <th><%= item.breed %></th>
-      <th><%= item.category %></th>
-    </tr>
-  <% end %>
-
+    <% @pets.each do |item| %>
+      <tr>
+        <th><%= item.id %></th>
+        <th><%= item.name %></th>
+        <th><%= item.birthday.strftime("%d/%m/%Y") %></th>
+        <th><%= item.breed %></th>
+        <th><%= item.category %></th>
+        <th><%= link_to I18n.t('see_more'), pet_medicals_path(pet_id: item.id) %></th>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 

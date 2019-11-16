@@ -1,28 +1,22 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   welcome: Welcome to Pet list
+  action: Action    
+  see_more: See more  
+  medical_record: Medical Record
+  go_back: Go back
+  submit: Submit
+  add: Add
+  success_create: Successfully created
+  error_create: Error creating
+  success_destroy: Successfully delete
+  error_destroy: Error deleting
+  delete: Delete
+  confirmation: Are you sure?
   pet:
     name: Name
     birthday: Birthday
     breed: Breed
     category: Category
+  medical:
+    treatment: Treatment
+    symptom: Symptom
