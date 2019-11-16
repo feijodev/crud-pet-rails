@@ -22,6 +22,9 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap', '~> 4.0.0'
 gem 'will_paginate-bootstrap4'
+gem "bootstrap_form", "~> 4.0"
+gem 'jquery-rails'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

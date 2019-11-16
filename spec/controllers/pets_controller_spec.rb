@@ -13,4 +13,18 @@ RSpec.describe PetsController, type: :controller do
       expect(response).to render_template("index")
     end
   end
+
+  describe "POST pets" do
+    before do
+      post :create
+    end
+
+    it "renders nothing when create" do
+      expect(response.status).to eq(302)
+    end
+
+    it "redirect on finish" do
+      expect(response.status).to eq(302)
+    end
+  end
 end
