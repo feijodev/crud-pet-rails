@@ -1,0 +1,16 @@
+DONE
+
+  - Listagem de pet
+  - Criação de pet
+  - Listagem de prontuario
+  - Criação de prontuario
+  - Exclusão de prontuario
+  - Listagem de pets com prontuario em json
+
+TODO
+
+  - Criar um model para tonar o breed do pet dinamico
+  - Criar um model para tornar o category do pet dinamico
+  - Melhorar os testes de controller
+  - Criar testes de view
+  - Deixar de ser monolítico
