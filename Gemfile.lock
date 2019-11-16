@@ -229,7 +229,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
-  bootstrap (~> 4.0.0)
+  bootstrap
   bootstrap_form (~> 4.0)
   byebug
   coffee-rails (~> 4.2)
