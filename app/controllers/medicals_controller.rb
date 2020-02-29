@@ -20,18 +20,18 @@ class MedicalsController < ApplicationController
   
   # DELETE /pets/:pet_id/medicals/:id
   def destroy
-    @medical.destroy
-
-    if @medical.destroy
-      hash = { :success => I18n.t('success_destroy') }
-    else
-      hash = { :danger => I18n.t('error_destroy') }
-    end
-
+    hash = real_destroy
     redirect_to pet_medicals_path(pet_id: params[:pet_id]), flash: hash
   end
   
   private
+
+  def real_destroy
+    if @medical.destroy
+      return { :success => I18n.t('success_destroy') }
+    
+    return { :danger => I18n.t('error_destroy') }
+  end
   
   def medical_params
     # whitelist params
